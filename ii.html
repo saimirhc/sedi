@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUTBOLLIM - Live Football Streaming</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+            background-color: #343a40;
+            color: #fff;
+            margin-bottom: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            padding: 50px;
+        }
+
+        .stream-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .stream-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .play-button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .play-button:hover {
+            background-color: #218838;
+        }
+
+        .iframe-container {
+            display: none;
+            margin-top: 20px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 350px;
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>FUTBOLLIM - Watch Live Football Matches</h1>
+
+    <div class="container">
+        <div class="stream-box">
+            <div class="stream-title">Real Madrid vs Barcelona</div>
+            <button class="play-button" onclick="showStream()">Watch Live</button>
+
+            <div class="iframe-container" id="streamContainer">
+                <iframe src="https://koora.vip/share.php?ch=cosm2_1" allowfullscreen="true"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showStream() {
+            document.getElementById('streamContainer').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
